@@ -6,16 +6,31 @@
 }
 
 .card-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: left;
 
-  .title {}
+  .title {
+    display: inline-block;
+  }
 
   .links {
     float: right;
+    margin-left: auto;
 
     a {
-      border-radius: 51%;
-      
+      $size: 300px;
+
+      // border: 2px solid #EEE;
+      // border-radius: 51%;
+      font-size: 30px;
+      height: $size;
+      width: $size;
+
+      &:first-child {
+        margin-right: 10px;
+      }
     }
   }
 }

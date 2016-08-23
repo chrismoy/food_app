@@ -5,13 +5,17 @@ class PlacesController < ApplicationController
   # GET /places.json
   def index
     params = { term: 'food',
-               limit: 3
-               # category_filter: 'discgolf'
+               # limit: 20
              }
 
     locale = { lang: 'en' }
 
-    @places = Yelp.client.search('Chicago', params, locale).businesses
+    @place = Yelp.client.search('Chicago', params, locale).businesses.sample
+
+    respond_to do |format|
+      format.html { render :index }
+      format.js   { render :index }
+    end
   end
 
   # GET /places/1

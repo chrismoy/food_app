@@ -4,7 +4,14 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Instagram.media_popular
+    params = { term: 'food',
+               limit: 3
+               # category_filter: 'discgolf'
+             }
+
+    locale = { lang: 'en' }
+
+    @places = Yelp.client.search('Chicago', params, locale).businesses
   end
 
   # GET /places/1

@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem "haml-rails", "~> 0.9"
 gem 'figaro'
 gem 'materialize-sass'
+gem 'font-awesome-sass', '~> 4.6.2'
 gem 'yelp', require: 'yelp'
 gem 'instagram'
 

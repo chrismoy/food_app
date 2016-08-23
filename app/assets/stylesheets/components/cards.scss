@@ -1,0 +1,21 @@
+.card {
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.card-content {
+  text-align: left;
+
+  .title {}
+
+  .links {
+    float: right;
+
+    a {
+      border-radius: 51%;
+      
+    }
+  }
+}

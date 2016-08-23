@@ -1,0 +1,14 @@
+.card{ class: "#{hidden ? '' : 'hidden'}" }
+  .card-image
+    = image_tag place.image_url
+    / %span.card-title= place.name
+  .card-content
+    %h5.title= place.name
+    .links 
+      = link_to "#", class: "red" do
+        = icon 'times'
+      = link_to "#", class: "green" do
+        = icon 'heart'
+
+  / .card-action
+  /   = link_to "Go to site", place.mobile_url, target: "_blank", rel: "noopener noreferrer"

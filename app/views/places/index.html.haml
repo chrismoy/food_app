@@ -1,17 +1,4 @@
-%h1 Listing places
-
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @places.each do |place|
-      %tr
-        %td= image_tag popular.images.low_resolution.url
-
-%br
-
-= link_to 'New Place', new_place_path
+.row.center
+  .col.s12.m8.l6.offset-s2.offset-l3
+    - @places.each_with_index do |place, idx|
+      = render 'card', place: place, hidden: idx == 0

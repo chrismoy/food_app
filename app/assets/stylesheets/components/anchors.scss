@@ -1,0 +1,10 @@
+a {
+
+  &.text-green {
+    @extend .green-text, .text-accent-3;
+  }
+
+  &.text-green {
+    @extend .red-text, .text-accent-3;
+  }
+}

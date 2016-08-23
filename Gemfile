@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "haml-rails", "~> 0.9"
 gem 'figaro'
+gem 'materialize-sass'
 gem 'yelp', require: 'yelp'
 gem 'instagram'
 

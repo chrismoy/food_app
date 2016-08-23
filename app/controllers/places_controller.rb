@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Instagram.media_popular
   end
 
   # GET /places/1

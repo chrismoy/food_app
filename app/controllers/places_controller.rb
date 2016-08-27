@@ -10,11 +10,11 @@ class PlacesController < ApplicationController
 
     locale = { lang: 'en' }
 
-    @place = Yelp.client.search('Chicago', params, locale).businesses.sample
+    @places = Yelp.client.search('Chicago', params, locale).businesses.sample(3)
 
     respond_to do |format|
       format.html { render :index }
-      format.js   { render :index }
+      format.js   { @place = @places[0]; render :index }
     end
   end
 

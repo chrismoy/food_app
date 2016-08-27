@@ -1,4 +1,5 @@
 .row.center
   .col.s12.m8.l6.offset-s2.offset-l3
     .cards
-      = render 'card', place: @place
+      - @places.each_with_index do |place, idx|
+        = render 'card', place: place, idx: idx

@@ -15,11 +15,9 @@ var cycleQueue = function(event) {
   });
 
   if ($('.card').length < 3) {
-    // $.get("/places", function(response) {
-    //   console.log(response)
-    // })
 
     $.ajax({
+      method: 'GET',
       url: '/places'
     }).done( function(response) {
       console.log(response)

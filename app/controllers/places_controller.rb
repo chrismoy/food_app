@@ -12,6 +12,8 @@ class PlacesController < ApplicationController
 
     @places = Yelp.client.search('Chicago', params, locale).businesses.sample(3)
 
+    byebug
+
     respond_to do |format|
       format.html { render :index }
       format.js   { @place = @places[0]; render :index }
